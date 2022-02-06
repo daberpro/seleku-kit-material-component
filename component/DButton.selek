@@ -1,0 +1,19 @@
+import { dabMain } from "dabcom";
+
+export function DButton({$tobeChild,text,onclick =()=>{},type,$class = "",$id=0}){
+
+    let style = ["--outlined","--solid"];
+    if(type !== void 0) { style = style.filter(e => e.match(type)) }
+    else { style = [""] };
+
+    return  <button 
+                $loopComponent="$id"
+                state="{{text}}"
+                on:click="{(e)=> onclick(e)}"
+                class="$class+' smc-button smc-button'+style[0]+' smc-ripple'"
+            >
+                <div class="'ripple'"></div>
+                ${this.state.text}
+            </button>
+
+}

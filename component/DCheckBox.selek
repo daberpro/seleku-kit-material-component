@@ -1,0 +1,11 @@
+import { dabMain } from "dabcom";
+
+export function DCheckBox({$toBeChild,$id=0}){
+
+    return  <label $loopComponent="$id" class="'smc-container'">
+                <input type="'checkbox'" checked="'checked'"/>
+                <span class="'checkmark'"></span>
+            </label>
+
+
+}

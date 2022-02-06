@@ -1,0 +1,139 @@
+import { dabMain } from "dabcom";
+
+export function TableTitle({$toBeChild,args}){
+
+    let Component = [];
+
+    for( let x in args){
+
+        Component.push(dabMain.createRawComponent("th",{ 
+            content: "`${this.state.text}`", 
+            parentComponent: parentcomponent, 
+            positionComponent: positioncomponent+x, 
+            state: {
+                text: args[x]
+            }, 
+            event: {}, 
+            attribute: {}, 
+            id: ""
+        }));
+    }
+
+    return Component;
+
+};
+
+export function TableRow({$toBeChild,count,content,$id=0}){
+
+    let Component = [];
+
+    for(let x = 0; x < count; x++){
+
+        Component = [
+            ...Component,
+            dabMain.createRawComponent("tr",{
+                content: "``", 
+                parentComponent: parentcomponent, 
+                positionComponent: "efhiesufdgsdvsdzbsefaee"+x+$id, 
+                state: {}, 
+                event: {}, 
+                attribute: {}, 
+                id: ""
+            }),
+            ...TableContent({
+                parentcomponent: "efhiesufdgsdvsdzbsefaee"+x+$id,
+                positioncomponent: "ahfoawhfioahs0gsesgse"+x+$id,
+                args: content[x]
+            })
+        ];
+
+    }
+
+    return Component;
+
+};
+
+export function TableContent({$toBeChild,args,$id=0}){
+
+    let Component = [];
+
+    for(let x in args){
+
+        Component.push(dabMain.createRawComponent("td",{
+            content: "`${this.state.content}`", 
+            parentComponent: parentcomponent, 
+            positionComponent: positioncomponent+x+$id, 
+            state: {
+                content: (args[x] instanceof Array)? "" : args[x] 
+            }, 
+            event: {},
+            attribute: {}, 
+            id: ""
+        }));
+
+        if(args[x] instanceof Array) {
+
+            let t = {
+                uniq: null
+            }
+
+            let newComponent = args[x].map((e,i) =>{
+                if(i === 0) t.uniq = (Math.random()*1323098284).toString("36");
+                return {
+                    name: e.name,
+                    attribute: e.attribute,
+                    positionComponent: e.positionComponent+t.uniq,
+                    parentComponent: (e.parentComponent === void 0)? positioncomponent+x+$id : e.parentComponent+t.uniq, 
+                    content: e.content,
+                    event: e.event,
+                    id: e.id,
+                    state: e.state
+                }
+
+            });
+            Component = [...Component,...newComponent];
+        }
+    }
+
+    return Component;
+
+};
+
+export function DTable({$toBeChild,tabletitle,tablebody,$id = 0,$class = ""}){
+
+    return [
+        dabMain.createRawComponent("table",{
+            content: "``", 
+            parentComponent: parentcomponent, 
+            positionComponent: positioncomponent + $id, 
+            state: {}, 
+            event: {}, 
+            attribute: {
+                "class": $class
+            }, 
+            id: ""
+        }),
+        dabMain.createRawComponent("tr",{
+            content: "``", 
+            parentComponent: positioncomponent + $id, 
+            positionComponent: "efhiesufhweiufyeufgrug"+$id, 
+            state: {}, 
+            event: {}, 
+            attribute: {}, 
+            id: ""
+        }),
+        ...TableTitle({
+            parentcomponent: "efhiesufhweiufyeufgrug"+$id,
+            positioncomponent: "ew9uwewyfgwiefgweufye"+$id,
+            args: tabletitle
+        }),
+        ...TableRow({
+            parentcomponent: positioncomponent +$id,
+            positioncomponent: "ew9uwewyfgwiefsergrgh"+$id,
+            count: tablebody.length,
+            content: tablebody,
+            $id
+        })
+    ]
+
+}

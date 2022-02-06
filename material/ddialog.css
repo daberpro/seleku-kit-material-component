@@ -1,0 +1,30 @@
+.smc-dialog{
+    width: 320px;
+    height: fit-content;
+    box-shadow: 0px 0px 50px rgba(200, 208, 249,0.1);
+    border-radius: 10px;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    background: white;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    z-index: 999;
+    padding: 20px;
+}
+
+.smc-dialog > *{
+    width: 100%;
+}
+
+.smc-dialog .action{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.smc-dialog .action button{
+    width: 50%;
+}

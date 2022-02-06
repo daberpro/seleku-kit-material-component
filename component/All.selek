@@ -1,0 +1,25 @@
+/*
+    this component create by daberdev (creator of seleku-kit)
+    at 19:00 WIB 06-02-2022
+*/
+
+import { DButton } from "./component/DButton.selek";
+import { DCard } from "./component/DCard.selek";
+import { DTextField } from "./component/DTextField.selek";
+import { DCheckBox } from "./component/DCheckBox.selek";
+import { DChips } from "./component/DChips.selek";
+import { DTable } from "./component/DTable.selek";
+import { DDialog } from "./component/DDialog.selek";
+import { setRipple } from "./component/init.js";
+import "../material/style.css";
+
+export {
+    DButton,
+    DCard,
+    DTextField,
+    DCheckBox,
+    DChips,
+    setRipple,
+    DTable,
+    DDialog
+}

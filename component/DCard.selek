@@ -1,0 +1,7 @@
+import { dabMain } from "dabcom";
+
+export function DCard({$toBeChild,$class,$id=0}){
+
+    return  <div $beChild componentId="positioncomponent+$id" class="$class+' smc-card'"></div>
+
+};

@@ -1,0 +1,12 @@
+import { dabMain } from "dabcom";
+
+export function DChips({$tobeChild,$class,$id = 0}){
+
+    return  <div $beChild componentId="positioncomponent+$id" class="$class+' smc-chips smc-ripple'">
+                <div $loopComponent="$id" class="'ripple'"></div>
+            </div>
+
+}
+
+
+

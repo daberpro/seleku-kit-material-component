@@ -1,0 +1,10 @@
+import { dabMain } from "dabcom";
+import { DCard } from "./DCard.selek";
+
+export function DDialog({$toBeChild,$id=0,title = "",$class=""}){
+
+    return  <div $beChild componentId="positioncomponent+$id" class="$class+' smc-card smc-dialog'">
+                <h3 $loopComponent="$id" state="{{title}}">${this.state.title}</h3>
+            </div>;
+
+};

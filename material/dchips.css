@@ -1,0 +1,25 @@
+.smc-chips{
+
+    width: fit-content;
+    overflow: hidden;
+    padding: 15px;
+    background: white;
+    border: 1px solid var(--primary);
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+}
+
+.smc-chips--text{
+    color: var(--secondary);
+}
+
+.smc-chips--icons{
+    color: var(--secondary);
+}
+

@@ -1,0 +1,26 @@
+{
+  "name": "seleku-kit-material-component",
+  "version": "1.0.0",
+  "description": "\"an material component for seleku-kit\"",
+  "main": "esbuild-plugin.seleku-kit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daberpro/seleku-kit-material-component.git"
+  },
+  "keywords": [
+    "dabcom",
+    "daberdev",
+    "daber",
+    "seleku-kit",
+    "seleku"
+  ],
+  "author": "daber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daberpro/seleku-kit-material-component/issues"
+  },
+  "homepage": "https://github.com/daberpro/seleku-kit-material-component#readme"
+}

@@ -3,14 +3,14 @@
     at 19:00 WIB 06-02-2022
 */
 
-import { DButton } from "./component/DButton.selek";
-import { DCard } from "./component/DCard.selek";
-import { DTextField } from "./component/DTextField.selek";
-import { DCheckBox } from "./component/DCheckBox.selek";
-import { DChips } from "./component/DChips.selek";
-import { DTable } from "./component/DTable.selek";
-import { DDialog } from "./component/DDialog.selek";
-import { setRipple } from "./component/init.js";
+import { DButton } from "./DButton.selek";
+import { DCard } from "./DCard.selek";
+import { DTextField } from "./DTextField.selek";
+import { DCheckBox } from "./DCheckBox.selek";
+import { DChips } from "./DChips.selek";
+import { DTable } from "./DTable.selek";
+import { DDialog } from "./DDialog.selek";
+import { setRipple } from "./init.js";
 import "../material/style.css";
 
 export {
